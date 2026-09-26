@@ -1,0 +1,7 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/devcontainer-config/features/dot-config:4": {},
+		"ghcr.io/stu-bell/devcontainer-features/node:0": {}
+	}
+}
