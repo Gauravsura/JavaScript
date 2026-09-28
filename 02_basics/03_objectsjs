@@ -1,0 +1,48 @@
+//There are two ways to declare an Object in js
+
+//1. Object Literal Syntax
+const myObj = {
+    name: "Gourav",
+    "full name": "Gourav Sura",
+    age: 22,
+    city: "Delhi",
+    isMarried: false,
+    lastLoginDays: ["Monday", "Tuesday", "Wednesday"]
+}
+
+
+console.log(myObj.name); // accessing object properties using dot notation
+console.log(myObj["age"]); // accessing object properties using bracket notation
+console.log(myObj["full name"]); // accessing object properties using bracket notation
+
+
+
+
+const mysymbol = Symbol("Key1"); //creating a symbol  
+
+const myObj3 = {
+    [mysymbol]: "Value1", //using symbol as a key in object
+    name: "Gourav",
+    age: 22,
+    city: "Delhi",
+    isMarried: false,
+    lastLoginDays: ["Monday", "Tuesday", "Wednesday"]
+}
+
+console.log(myObj3[mysymbol]); // accessing object properties using symbol as a key
+console.log(typeof(mysymbol)); //symbol
+
+
+//Updating object properties & understanding some methods of object
+
+// myObj.age = 23; //updating object property using dot notation
+// Object.freeze(myObj); //freezing the object so that its properties cannot be updated or deleted
+// myObj.city = "Mumbai";
+// console.log(myObj); //original object is not modified because it is frozen
+
+
+//Adding functions as properties of an object
+myObj.greet = function() {
+    console.log("Hello " + this.name); //this refers to the object itself
+} 
+console.log(myObj.greet()); //Hello Gourav
