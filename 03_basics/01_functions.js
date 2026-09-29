@@ -32,3 +32,32 @@ loginUser("gourav_sss", "password123"); //it will not return anything because we
 // are not storing the return value in a variable or printing it to the console.
 //It will print "Logging in user: gourav_sss" to the console and then print "Login successful!"
 // console.log(loginUser("gourav_sss", "password123"));
+
+
+function calculateCartPrice(...num1) {
+  return num1;
+}
+console.log(calculateCartPrice(100, 200, 300)); // [100, 200, 300]  //it will return an array of numbers passed to the function
+
+
+//Passing an Object as an argument to a function
+const user = {
+  name: "Gourav",
+  age: 23,   //if age is changed to ages, it will not be displayed in the console because we are trying to access user.age which is undefined
+            // so type checking is important in JavaScript, as it can lead to unexpected behavior if not handled properly.
+};
+function displayUserInfo(user) {
+  console.log(`UserName: ${user.name}, and Age: ${user.age}`);
+}          
+// displayUserInfo(user);
+displayUserInfo({ name: "Gourav", age: 23 }); //it will print "UserName: Gourav, and Age: 23" to the console
+
+
+//Passing an Array as an argument to a function
+const fruits = ["apple", "banana", "orange"];
+
+function displayFruits(getArray) {
+  return console.log(getArray[1]); //it will print "banana" to the console
+}
+displayFruits(fruits); //it will print "banana" to the console  
+displayFruits(["grapes", "mango", "kiwi"]); //it will print "mango" to the console
